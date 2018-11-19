@@ -1,17 +1,7 @@
-Coding Exercise 6: Filtering Values
+[section4-ex6] Section 4 - Exercise 6
 
-Filter the array of numbers using the filter helper, creating a new array that only contains numbers greater
-than 50. Assing this new array to a variable called 'filteredNumbers'. Don't forget to use the 'return'
-keywords in the function!
-
-var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
-
-
-var filteredNumbers = numbers.filter(number => (number > 50));  
-
-// 
-// var filteredNumbers = numbers.filter(number => {
-//    return (number > 50);
-// })
-
-
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
