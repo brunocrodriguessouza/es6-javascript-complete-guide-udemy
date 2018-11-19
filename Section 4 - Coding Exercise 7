@@ -12,7 +12,7 @@ var users = [
 ];
 
 // var filteredUsers = users.filter((access) => {
-//    // (access.admin === true)
+//    //(access.admin === true)
 //    return (access.admin)
 // })
 
