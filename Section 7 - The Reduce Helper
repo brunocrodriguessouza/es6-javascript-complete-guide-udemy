@@ -1,0 +1,58 @@
+var numbers = [10, 20, 30 ];
+var acum = 0;
+
+for (var i = 0; i < numbers.length; i++) {
+    acum += numbers[i];
+}
+
+numbers.reduce(function(acum, number) {
+   return sum + number;
+}, 0);
+
+
+var primaryColors = [
+    { color: 'red' },
+	{ color: 'yellow' },
+	{ color: 'blue' }
+];
+
+primaryColors.reduce(function(previous, primaryColor) {
+	previuous.push(primaryColor.color);
+	
+	return previous;
+}, []);
+
+
+function balancedParents(string) {
+	return !string.split("").reduce(function(previous, char) {
+		if( previous < 0) { return previous; }
+		if( char === "(") { return ++previous; }
+		if( char === ")") { return --previous; }
+		return previous;
+	}, 0);
+}
+
+balancedParents("((())))");
+
+
+Other way to resolve 
+
+const balance = (my_string) => {
+    const result = my_string.split('').reduce((acumulador, atual) =>
+           previous < 0      ? acumulador
+        : atual === '('      ? acumulador++
+        : atual === ')'      ? acumulador--
+    , 0);
+
+    return result === 0;
+}
+
+balance('((())))');
+
+
+
+
+
+
+
+
