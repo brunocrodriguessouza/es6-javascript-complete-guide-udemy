@@ -37,7 +37,7 @@ balancedParents("((())))");
 
 Other way to resolve 
 
-const balance = (my_string) => {
+const balance = (string) => {
     const result = my_string.split('').reduce((acumulador, atual) =>
            previous < 0      ? acumulador
         : atual === '('      ? acumulador++
