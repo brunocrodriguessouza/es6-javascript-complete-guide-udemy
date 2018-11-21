@@ -35,19 +35,18 @@ function balancedParents(string) {
 balancedParents("((())))");
 
 
-Other way to resolve 
-
-const balance = (string) => {
-    const result = my_string.split('').reduce((acumulador, atual) =>
-           previous < 0      ? acumulador
-        : atual === '('      ? acumulador++
-        : atual === ')'      ? acumulador--
+const balancedParents2 = (string) => {
+    const result = string.split('').reduce((acumulador, atual) =>
+         acumulador < 0      ? acumulador
+        : atual === '('      ? ++acumulador
+        : atual === ')'      ? --acumulador
+                             : -1
     , 0);
 
     return result === 0;
 }
 
-balance('((())))');
+balancedParents2('(((())))');
 
 
 
