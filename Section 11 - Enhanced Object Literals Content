@@ -21,3 +21,50 @@ const bookShop = createBookShop(inventory);
 bookShop.inventoryValue();
 bookShop.priceForTitle('Harry Potter');
 bookShop;
+
+----------------------------------------
+
+After refectoring createBookShop function:
+
+function createBookShop(inventory){
+	return {
+		inventory: inventory,
+		inventoryValue() {
+			return this.inventory.reduce((total, book) => total + book.price, 0);
+		},
+		priceForTitle(title) {
+			return this.inventory.find(book => book.title == title).price;
+		}
+	};
+}
+
+----------------------------------------
+function saveFile(url, data) {
+    $.ajax({
+	    url,
+		data,
+		method: 'POST'
+	});
+}
+
+const url = "http://fileupload.com";
+const data = { color: 'red'};
+
+saveFile(url, data);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
