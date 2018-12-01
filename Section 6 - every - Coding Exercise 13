@@ -3,14 +3,14 @@ Coding Exercise 13: In Progress Network Requests
 Given an array of network objects representing network requests, assign the boolean 'true' to the variable
 'InProgress' if any network request has a 'status' of 'pending'.
 
-var requests = [
+const requests = [
   { url: '/photos', status: 'complete' },
   { url: '/albums', status: 'pending' },
   { url: '/users', status: 'failed' }
 ];
 
 
-var inProgress = requests.some(request => request.status === 'pending')
+const inProgress = requests.some(request => request.status === 'pending')
 
 // var inProgress = requests.some(function(request) {    
 //     return request.status === 'pending';
