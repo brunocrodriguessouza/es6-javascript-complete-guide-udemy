@@ -1,0 +1,10 @@
+Coding Exercise 9: Template String in Practice
+
+Refactor the function to use template strings
+
+function doubleMessage(number) {
+  return "Your number doubled is " + (2 * number);
+}
+
+
+const doubleMessage = number => `Your number doubled is ${ number * 2}`;
