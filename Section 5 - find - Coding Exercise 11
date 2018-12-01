@@ -13,7 +13,7 @@ should return the found object.
 
 In summary:
 
-var ladders = [
+const ladders = [
   { id: 1, height: 20 },
   { ud: 3, height: 25 }
 ];
