@@ -17,6 +17,7 @@ function reject(array, iteratorFunction) {
   return array.filter(number => !iteratorFunction(number));
 }
 
+//
 // function reject(array, iteratorFunction) {
 //  return array.filter((number) => {
 //      return !iteratorFunction(number)
