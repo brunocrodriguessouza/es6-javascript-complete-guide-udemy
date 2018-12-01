@@ -1,0 +1,21 @@
+Coding Exercise 25: Literals in Functions
+
+Refactor to use enhanced literal notation
+
+const canvasDimensions = function(width, initialHeight) {
+  const height = initialHeight * 9 /16;
+  return { 
+    width: width, 
+    height: height 
+  };
+}
+
+Answer:
+
+const canvasDimensions = (width, initialHeight) => {
+  const height = initialHeight * 9 /16;
+  return { 
+    width, 
+    height 
+  };
+}
