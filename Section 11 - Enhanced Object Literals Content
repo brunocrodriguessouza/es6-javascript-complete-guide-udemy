@@ -20,3 +20,4 @@ const bookShop = createBookShop(inventory);
 
 bookShop.inventoryValue();
 bookShop.priceForTitle('Harry Potter');
+bookShop;
