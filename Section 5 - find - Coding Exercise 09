@@ -9,5 +9,5 @@ const users = [
 ];
 
 
-const admin = users.find(user => user.admin)
+let admin = users.find(user => user.admin)
 
