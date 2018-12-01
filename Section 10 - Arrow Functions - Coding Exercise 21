@@ -9,6 +9,7 @@ Refactor the code below to use a fat arrow function. Remember the rules of fat a
 removed
 2. If the function has a single argument, the parentheses around the argument list can be removed
 
+
 const fibonacci = function(n) {
   if (n < 3) return 1;
   return fibonacci(n - 1) + fibonacci(n - 2);
