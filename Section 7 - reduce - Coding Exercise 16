@@ -4,7 +4,7 @@ Another really hard one! Write a function called 'unique' that will remove all t
 array.
 
 For example, given the following array;
-var numbers = [1, 1, 2, 3, 4, 4];
+const numbers = [1, 1, 2, 3, 4, 4];
 
 You function should return
 [1, 2, 3, 4]
