@@ -11,6 +11,7 @@ var users = [
  { id: 5, admin: true },
 ];
 
+//
 // var filteredUsers = users.filter((access) => {
 //    //(access.admin === true)
 //    return (access.admin)
