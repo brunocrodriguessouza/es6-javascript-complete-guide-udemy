@@ -3,7 +3,7 @@ Coding Exercise 17: A constant Exercise of Letting Variables Be Variables
 Imagine that you are building an application to manage a user's Facebook profile. A profile might have a 'name',
  'age', and 'dataOfBirth'.
 Declare three varibles with these same names, making sure to use 'const' or 'let' depending on whether
-you expect the value to change over time.
+you expect the value to change over time
 
 
 let age = 34;
