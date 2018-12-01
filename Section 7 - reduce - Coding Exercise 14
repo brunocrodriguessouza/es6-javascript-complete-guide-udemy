@@ -10,7 +10,7 @@ const trips = [{ distance: 34 }, { distance: 12 } , { distance: 1 }];
 //     return acum + trip.distance;
 // }, 0);
 
-//My best solution
+// My best solution
 
 var totalDistance = trips.reduce((acum, trip) => acum + trip.distance, 0);
 
