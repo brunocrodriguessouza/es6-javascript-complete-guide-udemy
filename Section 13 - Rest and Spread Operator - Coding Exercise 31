@@ -1,0 +1,22 @@
+Coding Exercise 31: Mixing Rest and Spread
+
+Refactor the following to use the only the rest operator
+
+function unshift(array, a, b, c, d, e) {
+  return [a, b, c, d, e].concat(array);
+}
+
+Solution:
+
+function unshift(array, ...array2) {
+  return [...array2, ...array];
+}
+
+Best solution:
+
+const unshift = (array, ...character) => [...character, ...array];
+
+
+
+
+
