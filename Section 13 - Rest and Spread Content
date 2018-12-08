@@ -1,0 +1,77 @@
+function addNumbers(numbers) {
+	return numbers.reduce((sum, number) => {
+		return sum + number;;
+	}, 0);
+}
+
+addNumbers([1,2,3,4,5]);
+
+-------------------------------------------------
+
+function addNumbers(a,b,c,d,e) {
+	const numbers = [a,b,c,d,e];
+	return numbers.reduce((sum, number) => {
+		return sum + number;;
+	}, 0);
+}
+
+addNumbers([1,2,3,4,5]);
+
+-------------------------------------------------
+
+function addNumbers(...numbers) {
+	return numbers.reduce((sum, number) => {
+		return sum + number;;
+	}, 0);
+}
+
+addNumbers(1,2,3,4,5,6,7,8,9)
+
+-------------------------------------------------
+
+const defaultColors = ['red', 'green'];
+const userFavoriteColors = ['orange', 'yellow'];
+
+// defaultColors.concat(userFavoriteColors);
+[ ...defaultColors, ...userFavoriteColors ];
+
+-------------------------------------------------
+
+function validateShoppingList(...items) {
+	if (items.indexOf('milk') < 0) {
+		return ['milk', ...items ];
+	}
+
+	return items
+}
+
+validateShoppingList('oranges', 'bread', 'eggs');
+
+-------------------------------------------------
+
+const mathLibrary = {
+	calculateProduct(...rest) {
+		console.log('Please use the multiply method instead');
+		return this.multiply(...rest);
+	},
+	multiply(a, b) {
+		return a * b;
+	}
+};
+
+mathLibrary.calculateProduct(2,3);
+
+-------------------------------------------------
+
+const mathLibrary = {
+	calculateProduct(...rest) {
+		console.log('Please use the multiply method instead');
+		return this.multiply(...rest);
+	},
+	multiply(...numbers) {
+	return numbers.reduce((mult, number) => {
+		return mult * number;;
+	}, 1);
+	}
+};
+mathLibrary.calculateProduct(2,3,4);
