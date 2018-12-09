@@ -1,0 +1,22 @@
+
+const colors = ['red', 'green', 'blue'];
+let other = [];
+
+for (let color of colors) {
+	other.push(color);
+}
+
+other;
+
+-------------------------------------------------
+const numbers = [1,2,3,4];
+
+let total = 0;
+for (let number of numbers) {
+	total += number;
+}
+
+
+
+
+
