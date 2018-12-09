@@ -1,0 +1,119 @@
+function Car(options) {
+	this.title = options.title;
+}
+
+Car.prototype.drive = function() {
+	return 'vroom';
+}
+
+const car = new Car({ title: 'Focus' });
+car.drive(); //vroom
+car; // { title: 'Focus' }
+
+-------------------------------------------------
+
+function Car(options) {
+	this.title = options.title;
+}
+
+Car.prototype.drive = function() {
+	return 'vroom';
+}
+
+function Toyota(option) {
+	this.color = options.color;
+}
+
+const toyota = new Toyota({ color: 'red', title: 'Daily Driver' });
+toyota; // { color: 'red' }
+
+-------------------------------------------------
+function Car(options) {
+	this.title = options.title;
+}
+
+Car.prototype.drive = function() {
+	return 'vroom';
+}
+
+function Toyota(option) {
+	Car.call(this, options);
+	this.color = options.color;
+}
+
+Toyota.prototype = Object.create(Car.prototype);
+Toyota.prototype.constructor = Toyota;
+
+Toyota.prototype.honk = function() {
+	return 'beep';
+}
+const toyota = new Toyota({ color: 'red', title: 'Daily Driver' });
+
+toyota; // {"title":"Daily Driver","color":"red"}
+toyota.drive(); // vroom
+toyota.honk(); // beep
+
+-------------------------------------------------
+
+class Car {
+	constructor({ title )} {
+		this.title = title;
+	}
+
+	drive() {
+		return 'vroom';
+	}
+}
+
+const car = new Car({ title: 'Toyota' });
+car; // {"title":"Toyota"}
+car.drive(); // vroom
+
+-------------------------------------------------
+
+class Car {
+	constructor({ title }) {
+		this.title = title;
+	}
+
+	drive() {
+		return 'vroom';
+	}
+}
+
+class Toyota extends Car{
+
+	constructor(options) {
+		super(options);
+		this.color = options.color;
+	}
+
+	honk() {
+		return 'beep';
+	}
+}
+
+const toyota = new Toyota({color: 'red', title: 'Daily Drive'});
+
+toyota.honk(); // beep
+
+-------------------------------------------------
+React.createClass({
+	doSomething() {
+
+	},
+
+	doSomethingElse() {
+
+	}
+});
+
+class MyComponent extends Component {
+	doSomething(){
+
+	}
+
+	doSomethingElse() {
+
+	}
+}
