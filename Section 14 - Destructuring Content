@@ -1,0 +1,106 @@
+var expense = {
+    type: 'Business',
+	amount: '$45 USD'
+
+};
+
+var type = expense.type
+var amount = expense.amount
+
+// ES6
+
+const { type } = expense;
+const { amount } = expense;
+
+or
+
+const { type, amount } = expense;
+
+-------------------------------------------------
+
+var savedFiles = {
+	extension: 'jpg',
+	name: 'repost',
+	size: 14040
+};
+
+function fileSummary(file) {
+	return `The file ${file.name}.${file.extension} is of size ${file.size}`;
+}
+
+fileSummary(savedFiles);
+
+-------------------------------------------------
+
+var savedFiles = {
+	extension: 'jpg',
+	name: 'repost',
+	size: 14040
+};
+
+function fileSummary({ name, extension, size}) {
+	return `The file ${name}.${extension} is of size ${size}`;
+}
+
+fileSummary(savedFiles);
+
+-------------------------------------------------
+var savedFiles = {
+	extension: 'jpg',
+	name: 'repost',
+	size: 14040
+};
+
+function fileSummary({ name, extension, size}, { color }) {
+	return `The file ${name}.${extension} is of size ${size} and ${color}`;
+}
+
+fileSummary(savedFiles, {color: 'red'});
+-------------------------------------------------
+const companies = [
+	'Google',
+	'Facebook',
+	'Uber'
+];
+
+const [ name, name2, name3 ] = companies;
+name;
+name2;
+name3;
+-------------------------------------------------
+const companies = [
+	'Google',
+	'Facebook',
+	'Uber'
+];
+
+const [ name, ...rest ] = companies;
+rest; // ["Facebook", "Uber"]
+
+const [ name, name2, ...rest ] = companies;
+rest; // ["Uber"]
+
+companies[1]; // Facebook
+-------------------------------------------------
+const Google = {
+	locations: ['Mountain View', 'New York', 'London']
+};
+
+const { locations: locations} = Google;
+locations; //'Mountain View', 'New York', 'London'
+
+or 
+
+const { locations: [ locations ]} = Google;
+locations; //Mountain View
+-------------------------------------------------
+
+const points = [
+	[4, 5],
+	[10, 1],
+	[0, 40]
+];
+
+points.map(([ x, y ]) => {
+	return { x, y };
+});
