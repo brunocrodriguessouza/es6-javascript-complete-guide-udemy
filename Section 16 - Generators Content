@@ -24,7 +24,38 @@ function* numbers() {
 const gen = numbers();
 get.next(); //{"done":false}
 get.next(); //{"done":true}
--------------------------------------------------
+------------------------------------------------
+function* shopping() {
 
+	// stuff on the sidewalk
 
+	// walking down the sidewalk
 
+	// go into the store with cash
+	const stuffFromStore = yield 'cash';
+
+	// walking back home
+	return stuffFromStore;
+}
+
+// stuff the store
+const gen = shopping();
+gen.next(); // {"value":"cash","done":false}
+// walked into the store
+// walking up and down the aisles..
+// purchase our stuff
+
+gen.next('groceries'); // {"value":"groceries","done":true}
+------------------------------------------------
+function* colors() {
+	yield 'red';
+	yield 'blue'; 
+	yield 'green';
+}
+	
+const myColors = [];
+for (let color of colors()) {
+	myColors.push(color);
+}
+
+myColors;
