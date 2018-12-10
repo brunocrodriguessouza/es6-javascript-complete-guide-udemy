@@ -22,8 +22,8 @@ function* numbers() {
 }
 
 const gen = numbers();
-get.next();
-get.next();
+get.next(); //{"done":false}
+get.next(); //{"done":true}
 -------------------------------------------------
 
 
