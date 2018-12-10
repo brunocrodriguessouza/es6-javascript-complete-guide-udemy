@@ -16,7 +16,15 @@ for (let number of numbers) {
 	total += number;
 }
 
+-------------------------------------------------
+function* numbers() {
+	yield;
+}
 
+const gen = numbers();
+get.next();
+get.next();
+-------------------------------------------------
 
 
 
