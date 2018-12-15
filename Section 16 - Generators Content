@@ -59,3 +59,106 @@ for (let color of colors()) {
 }
 
 myColors;
+
+------------------------------------------------
+const engineeringTeam = {
+	size: 3,
+	department: 'Engineering',
+	lead: 'Jill',
+	manager: 'Alex',
+	engineer: 'Dave'
+};
+
+function* TeamIterator(team) {
+	yield team.lead;
+	yield team.manager;
+	yield team.engineer;
+	const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+	yield* testingTeamGenerator;
+
+}
+
+function* TestingTeamIterator(team) {
+	yield team.lead;
+	yield team.tester;
+}
+
+const names = [];
+for (let name of TeamIterator(engineeringTeam)) {
+	names.push(name);
+}
+
+names;
+------------------------------------------------
+const testingTeam = {
+ 	lead: 'Amanda',
+  tester: 'Bill'
+}
+
+const engineeringTeam = {
+  testingTeam,
+	size: 3,
+	department: 'Engineering',
+	lead: 'Jill',
+	manager: 'Alex',
+	engineer: 'Dave'
+};
+
+function* TeamIterator(team) {
+	yield team.lead;
+	yield team.manager;
+	yield team.engineer;
+  const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
+	yield* testingTeamGenerator;
+
+}
+
+function* TestingTeamIterator(team) {
+	yield team.lead;
+	yield team.tester;
+}
+
+const names = [];
+for (let name of TeamIterator(engineeringTeam)) {
+	names.push(name);
+}
+
+names;
+------------------------------------------------
+const testingTeam = {
+ 	lead: 'Amanda',
+  tester: 'Bill',
+  [Symbol.iterator]: function* () {
+		yield this.lead;
+		yield this.tester;
+	}
+}
+
+const engineeringTeam = {
+  testingTeam,
+	size: 3,
+	department: 'Engineering',
+	lead: 'Jill',
+	manager: 'Alex',
+	engineer: 'Dave'
+};
+
+function* TeamIterator(team) {
+	yield team.lead;
+	yield team.manager;
+	yield team.engineer;
+	yield* testingTeam;
+}
+
+function* TestingTeamIterator(team) {
+	yield team.lead;
+	yield team.tester;
+}
+
+const names = [];
+for (let name of TeamIterator(engineeringTeam)) {
+	names.push(name);
+}
+
+names;
+------------------------------------------------
