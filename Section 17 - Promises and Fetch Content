@@ -1,0 +1,65 @@
+promise = new Promise((resolve, reject) => {
+	reject();
+}); 
+
+promise.then(() => {
+	console.log('finally finished!');
+)}
+
+-------------------------------------------------
+
+promise = new Promise((resolve, reject) => {
+	resolve();
+}); 
+
+promise.then(() => {
+	console.log('finally finished!');
+});
+
+-------------------------------------------------
+
+promise = new Promise((resolve, reject) => {
+	resolve();
+}); 
+
+promise
+	.then(() => {
+		console.log('finally finished!');
+	})
+	.then(() => {
+		console.log('I was also ran!!!')
+	}); 
+
+-------------------------------------------------
+promise = new Promise((resolve, reject) => {
+	resolve();
+}); 
+
+promise
+	.then(() => console.log('finally finished!'))
+	.then(() => console.log('I was also ran!!!'))
+	.catch(() => console.log('uh oh!!'));
+
+-------------------------------------------------
+
+url = "https://jsonplaceholder.typicode.com/posts/";
+
+fetch(url)
+	.then(data => console.log(data))
+
+-------------------------------------------------
+
+url = "https://jsonplaceholder.typicode.com/posts/";
+
+fetch(url)
+	.then(response => response.json())
+	.then(data => console.log(data));
+
+-------------------------------------------------
+
+
+url = "https://jsonplaceholder.typicode.com/posts/";
+
+fetch(url)
+	.then(response => console.log(response))
+	.catch(error => console.log('BAD', error));
